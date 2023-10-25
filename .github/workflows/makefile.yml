@@ -9,7 +9,7 @@ jobs:
     - name: Hello World
       run: |
         echo "Hello World" $AWS_REGION ${{ env.AWS_REGION }}
-        export TEST="Hello me"
+        echo 'TEST="Hello me"' >>$GITHUB_ENV
     - name: List Repo files
       run: echo $TEST
   
