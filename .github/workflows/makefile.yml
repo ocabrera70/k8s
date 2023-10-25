@@ -9,7 +9,7 @@ jobs:
     - name: Hello World
       run: |
         echo "Hello World" $AWS_REGION ${{ env.AWS_REGION }}
-        TEST="Hello me"
+        export TEST="Hello me"
     - name: List Repo files
       run: echo $TEST
   
