@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Hello World
-      run: 'echo "Hello World"'
+      run: 'echo "Hello World" $AWS_REGION ${{ env.AWS_REGION }}'
     - name: List Repo files
       run: ls -l
   
