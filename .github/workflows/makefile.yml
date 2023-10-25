@@ -2,11 +2,15 @@ name: First Workflow
 on: workflow_dispatch
 jobs:
   first-job:
+    env:
+      TEST: ""
     runs-on: ubuntu-latest
     steps:
     - name: Hello World
-      run: 'echo "Hello World" $AWS_REGION ${{ env.AWS_REGION }}'
+      run: |
+      echo "Hello World" $AWS_REGION ${{ env.AWS_REGION }}
+      TEST="Hello me"
     - name: List Repo files
-      run: ls -l
+      run: echo $TEST
   
     
